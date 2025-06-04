@@ -1,0 +1,105 @@
+<nav class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-blue-500/50 text-white text-center py-4 px-6 z-50 w-full max-w-6xl rounded-lg shadow-lg">
+            <div class="flex flex-wrap justify-center gap-5 font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              
+              <div class="px-4 hover:font-black cursor-pointer">
+                <a href="index.html">Home</a>
+              </div>
+          
+              <div class="relative group px-4 hover:font-black cursor-pointer">
+                About Us
+                <ul class="hidden group-hover:block absolute top-full left-0 bg-blue-500/50 text-left p-2 space-y-1 rounded shadow-lg z-50 w-max">
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">MD Message</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">What We Do</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Our Team</a></li>
+                </ul>
+              </div>
+          
+              <div class="relative group px-4 hover:font-black cursor-pointer">
+                Publications
+                <ul class="hidden group-hover:block absolute top-full left-0 bg-blue-500/50 text-left p-2 space-y-1 rounded shadow-lg z-50 w-max">
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Innovation & Research Domain</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Innovation & Development</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Research & Evaluation</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Training</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Technical Assistance</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Market Analysis</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Surveys</a></li>
+                </ul>
+              </div>
+          
+              <div class="relative group px-4 hover:font-black cursor-pointer">
+                Services
+                <ul class="hidden group-hover:block absolute top-full left-0 bg-blue-500/50 text-left p-2 space-y-1 rounded shadow-lg z-50 w-max">
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Book</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Journal</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Columns</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Poster</a></li>
+                </ul>
+              </div>
+          
+              <div class="px-4 hover:font-black cursor-pointer">
+                <a href="index.html">News & Events</a>
+              </div>
+          
+              <div class="px-4 hover:font-black cursor-pointer">
+                <a href="index.html">Gallery</a>
+              </div>
+          
+              <div class="px-4 hover:font-black cursor-pointer">
+                <a href="index.html">Contact</a>
+              </div>
+          
+            </div>
+          </nav><nav class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-blue-500/50 text-white text-center py-4 px-6 z-50 w-full max-w-6xl rounded-lg shadow-lg">
+            <div class="flex flex-wrap justify-center gap-5 font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              
+              <div class="px-4 hover:font-black cursor-pointer">
+                <a href="index.html">Home</a>
+              </div>
+          
+              <div class="relative group px-4 hover:font-black cursor-pointer">
+                About Us
+                <ul class="hidden group-hover:block absolute top-full left-0 bg-blue-500/50 text-left p-2 space-y-1 rounded shadow-lg z-50 w-max">
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">MD Message</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">What We Do</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Our Team</a></li>
+                </ul>
+              </div>
+          
+              <div class="relative group px-4 hover:font-black cursor-pointer">
+                Publications
+                <ul class="hidden group-hover:block absolute top-full left-0 bg-blue-500/50 text-left p-2 space-y-1 rounded shadow-lg z-50 w-max">
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Innovation & Research Domain</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Innovation & Development</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Research & Evaluation</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Training</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Technical Assistance</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Market Analysis</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Surveys</a></li>
+                </ul>
+              </div>
+          
+              <div class="relative group px-4 hover:font-black cursor-pointer">
+                Services
+                <ul class="hidden group-hover:block absolute top-full left-0 bg-blue-500/50 text-left p-2 space-y-1 rounded shadow-lg z-50 w-max">
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Book</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Journal</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Columns</a></li>
+                  <li><a href="#" class="block px-4 py-1 hover:bg-blue-600/70">Poster</a></li>
+                </ul>
+              </div>
+          
+              <div class="px-4 hover:font-black cursor-pointer">
+                <a href="index.html">News & Events</a>
+              </div>
+          
+              <div class="px-4 hover:font-black cursor-pointer">
+                <a href="index.html">Gallery</a>
+              </div>
+          
+              <div class="px-4 hover:font-black cursor-pointer">
+                <a href="index.html">Contact</a>
+              </div>
+          
+            </div>
+          </nav>

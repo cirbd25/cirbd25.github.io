@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre for Innovation and Research (CIR)</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    #mdmessage {
+      scroll-margin-top: 60px;
+    }
+    #whatwedo {
+      scroll-margin-top: 40px;
+    }
+    #contact {
+      scroll-margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <nav class="bg-white shadow-md fixed top-0 w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="./index.html" class="text-xl font-bold text-blue-600"><img src="./img/logo.png" class="left-0 h-16" alt=""></a>
+          </div>
+
+          <!-- Hamburger Button -->
+          <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop Nav -->
+          <ul class="hidden md:flex space-x-4 items-center text-gray-700 relative">
+            <li><a href="./index.html" class="hover:text-blue-600 py-2 px-3">Home</a></li>
+
+            <!-- About Us Dropdown -->
+            <li class="relative group">
+              <p class="hover:text-blue-600 py-2 px-3 inline-block">About Us</p>
+              <ul class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md w-48 z-10">
+                <li><a href="./index.html#mdmessage" class="block px-4 py-2 hover:bg-gray-100">MD Message</a></li>
+                <li><a href="./index.html#whatwedo" class="block px-4 py-2 hover:bg-gray-100">What We Do</a></li>
+                <li><a href="./our_team.html" class="block px-4 py-2 hover:bg-gray-100">Our Team</a></li>
+              </ul>
+            </li>
+
+            <!-- Publications Dropdown -->
+            <li class="relative group">
+              <p class="hover:text-blue-600 py-2 px-3 inline-block">Publications</p>
+              <ul class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md w-64 z-10">
+                <li><a href="./innovation_and_research_domain.html" class="block px-4 py-2 hover:bg-gray-100">Innovation & Research Domain</a></li>
+                <li><a href="./innovation_and_development.html" class="block px-4 py-2 hover:bg-gray-100">Innovation & Development</a></li>
+                <li><a href="./research_evaluation.html" class="block px-4 py-2 hover:bg-gray-100">Research Evaluation</a></li>
+                <li><a href="./training.html" class="block px-4 py-2 hover:bg-gray-100">Training</a></li>
+                <li><a href="./technical_assistance.html" class="block px-4 py-2 hover:bg-gray-100">Technical Assistance</a></li>
+                <li><a href="./market_analysis.html" class="block px-4 py-2 hover:bg-gray-100">Market Analysis</a></li>
+                <li><a href="./surveys.html" class="block px-4 py-2 hover:bg-gray-100">Surveys</a></li>
+              </ul>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="relative group">
+              <p class="hover:text-blue-600 py-2 px-3 inline-block">Services</p>
+              <ul class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md w-48 z-10">
+                <li><a href="./book.html" class="block px-4 py-2 hover:bg-gray-100">Book</a></li>
+                <li><a href="./journal.html" class="block px-4 py-2 hover:bg-gray-100">Journal</a></li>
+                <li><a href="./coloumn.html" class="block px-4 py-2 hover:bg-gray-100">Columns</a></li>
+                <li><a href="./poster.html" class="block px-4 py-2 hover:bg-gray-100">Poster</a></li>
+              </ul>
+            </li>
+
+            <li><a href="./news_and_events.html" class="hover:text-blue-600 py-2 px-3">News & Events</a></li>
+            <li><a href="./gallery.html" class="hover:text-blue-600 py-2 px-3">Gallery</a></li>
+            <li><a href="./index.html#contact" class="hover:text-blue-600 py-2 px-3">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-gray-700">
+        <a href="./index.html" class="block py-2">Home</a>
+
+        <!-- About Us -->
+        <div>
+          <button class="w-full text-left py-2 font-medium toggle-submenu" data-target="about-submenu">About Us</button>
+          <div id="about-submenu" class="hidden pl-4 space-y-1">
+            <a href="./index.html#mdmessage" class="block">MD Message</a>
+            <a href="./index.html#whatwedo" class="block">What We Do</a>
+            <a href="./our_team.html" class="block">Our Team</a>
+          </div>
+        </div>
+
+        <!-- Publications -->
+        <div>
+          <button class="w-full text-left py-2 font-medium toggle-submenu" data-target="publications-submenu">Publications</button>
+          <div id="publications-submenu" class="hidden pl-4 space-y-1">
+            <a href="./innovation_and_research_domain.html" class="block">Innovation & Research Domain</a>
+            <a href="./innovation_and_development.html" class="block">Innovation & Development</a>
+            <a href="./research_evaluation.html" class="block">Research Evaluation</a>
+            <a href="./training.html" class="block">Training</a>
+            <a href="./technical_assistance.html" class="block">Technical Assistance</a>
+            <a href="./market_analysis.html" class="block">Market Analysis</a>
+            <a href="./surveys.html" class="block">Surveys</a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <button class="w-full text-left py-2 font-medium toggle-submenu" data-target="services-submenu">Services</button>
+          <div id="services-submenu" class="hidden pl-4 space-y-1">
+            <a href="./book.html" class="block">Book</a>
+            <a href="./journal.html" class="block">Journal</a>
+            <a href="./coloumn.html" class="block">Columns</a>
+            <a href="./poster.html" class="block">Poster</a>
+          </div>
+        </div>
+
+        <a href="./news_and_events.html" class="block py-2">News & Events</a>
+        <a href="./gallery.html" class="block py-2">Gallery</a>
+        <a href="./index.html#contact" class="block py-2">Contact</a>
+      </div>
+    </nav>
+  </header>
+    
+    <main class="flex flex-col items-center min-h-screen px-4 pt-20">
+        <div class="max-w-[1440px] mt-5">
+            <div class="text-center">
+                <!-- Heading and Purpose -->
+                <h3 class="text-green-900 font-bold text-2xl">Welcome to Centre for Innovation and Research (CIR)</h3>
+                <h1 class="text-blue-950 font-bold text-3xl">A Center for Innovation & Research</h1>
+                <!-- <div class="flex justify-center items-center text-center">
+                    <svg width="300" height="40" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" class="text-teal-500">
+                        <line x1="10" y1="10" x2="90" y2="10" stroke="currentColor" stroke-width="2"/>
+                        <polygon points="50,15 45,10 55,10" fill="currentColor"/>
+                        <circle cx="10" cy="10" r="2" fill="currentColor"/>
+                        <circle cx="90" cy="10" r="2" fill="currentColor"/>
+                    </svg>
+                </div> -->
+                <!-- Slogan -->
+                <h1 class="text-purple-700 text-3xl font-bold">“Wisdom for the service of humanity through creativity”</h1>
+            </div>
+            <div class="grid md:grid-cols-4 grid-cols-2 mt-5">
+                <div class="text-justify col-span-2 order-2 md:order-1 mt-4 max-w-3xl px-8 md:my-auto mx-auto">
+                    <!-- Summary -->
+                    <p>
+                        Centre for Innovation & Research (CIR) seeks to be the leading institution for in-depth
+                        innovation, research, and development to promote inclusive policymaking in Bangladesh,
+                        and strengthen regional and global economic integration.
+                    </p>
+                    <br>
+                    <p>
+                        The Centre for Innovation and Research (CIR) is committed to fostering a culture of
+                        discovery, creativity, and innovation that drives progress and transforms lives. Our Research
+                        and Innovation Hub serves as the nucleus of excellent research and visionary thinking. With
+                        a rich tapestry of expertise across various disciplines, and a relentless pursuit of knowledge,
+                        we are shaping the future through our research endeavors.
+                    </p>
+                </div>
+                <div class="col-span-2 order-1 md:order-2">
+                  <img src="./img/stock.jpg" alt="" class="max-h-72 mx-auto my-auto">
+                </div>
+            </div>
+             <div class="flex justify-center items-center text-center mt-5">
+                <svg width="300" height="40" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" class="text-teal-500">
+                    <line x1="10" y1="10" x2="90" y2="10" stroke="currentColor" stroke-width="2"/>
+                    <polygon points="50,15 45,10 55,10" fill="currentColor"/>
+                    <circle cx="10" cy="10" r="2" fill="currentColor"/>
+                    <circle cx="90" cy="10" r="2" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="mt-5 grid md:grid-cols-4 grid-cols-2 gap-6">
+              <div class="col-span-2 mx-auto mt-4 px-4">
+                <!-- vision -->
+                 <h3 class="font-bold text-center text-2xl">Our Vision</h3>
+                 <p class="text-justify">To be a pioneering hub that fosters groundbreaking innovations and cutting-edge research,
+                    empowering individuals and industries to solve global challenges, drive sustainable growth,
+                    and inspire transformative change through collaboration, creativity, and technology.</p>
+              </div>
+              <div class="col-span-2 mx-auto mt-4 px-4">
+                <!-- mision -->
+                 <h3 class="font-bold text-center text-2xl">Our Mission</h3>
+                 <p class="text-justify">To create an ecosystem that nurtures curiosity, drives impactful research, and accelerates
+                    innovation across various fields. By collaborating with academia, industry, and
+                    communities, we aim to generate transformative solutions that address current and future
+                    challenges, enhance knowledge, and contribute to the sustainable development of society
+                    and the economy. Serving the growing demand of nation of Bangladesh for a demand-driven
+                    and accountable development process by stimulating information, generating knowledge
+                    and influencing policymaking through innovation and research.</p>
+              </div>
+            </div>
+            <div class="flex justify-center items-center text-center mt-5">
+                <svg width="300" height="40" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" class="text-teal-500">
+                    <line x1="10" y1="10" x2="90" y2="10" stroke="currentColor" stroke-width="2"/>
+                    <polygon points="50,15 45,10 55,10" fill="currentColor"/>
+                    <circle cx="10" cy="10" r="2" fill="currentColor"/>
+                    <circle cx="90" cy="10" r="2" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="mt-5 grid gap-6 md:grid-cols-7 grid-cols-4">
+              <div class="col-span-4 order-2 md:order-1 mt-4 max-w-3xl px-8 md:my-auto mx-auto">
+                 <!-- objectives -->
+                 <h3 class="font-bold text-center text-2xl">Our Objectives</h3>
+                 <ol class="list-decimal text-justify">
+                    <li>Foster Innovation: Encourage the development of creative ideas and solutions that
+                        address real-world challenges across various industries and sectors.</li>
+                    <li>Promote Collaborative Research: Facilitate partnerships between academia, industry,
+                        and government to enhance the quality and applicability of research</li>
+                    <li>Advance Knowledge: Drive the pursuit of new knowledge through cutting-edge research
+                        and experiments, contributing to the global body of scientific and technological
+                        understanding.</li>
+                    <li>Support Sustainable Development: Focus on research and innovation that promotes
+                        environmental sustainability, economic growth, and social well-being.</li>
+                    <li>Develop Practical Solutions: Translate research findings into practical applications that
+                        benefit society, businesses, and communities.</li>
+                    <li>Encourage Entrepreneurial Spirit: Nurture an entrepreneurial mindset among researchers,
+                        offering support to transform innovative ideas into startups and scalable businesses.</li>
+                    <li>Provide Knowledge Transfer: Share research outcomes and innovations with relevant
+                        stakeholders, ensuring their implementation in industry, policy-making, and public services.</li>
+                    <li>Cultivate Talent: Provide training and mentoring to students, researchers, and
+                        professionals, building a pipeline of skilled innovators and researchers.</li>
+                    <li>Promote Interdisciplinary Research: Encourage collaboration across various disciplines
+                        to address complex, multifaceted problems with innovative solutions.</li>
+                    <li>Create a Global Impact: Position the center as a leader in innovation and research,
+                        contributing to the advancement of science, technology, and society on a global scale.</li>
+                 </ol>
+              </div>
+              <div class="col-span-4 md:col-span-3 order-1 md:order-2 flex justify-center items-center">
+                <img src="./img/objective.jpg" alt="" class="max-h-80 w-auto">
+              </div>
+            </div>
+            <div class="flex justify-center items-center text-center mt-10">
+                <svg width="300" height="40" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" class="text-teal-500">
+                    <line x1="10" y1="10" x2="90" y2="10" stroke="currentColor" stroke-width="2"/>
+                    <polygon points="50,15 45,10 55,10" fill="currentColor"/>
+                    <circle cx="10" cy="10" r="2" fill="currentColor"/>
+                    <circle cx="90" cy="10" r="2" fill="currentColor"/>
+                </svg>
+            </div>
+            <div id="mdmessage" class="flex flex-col items-center px-4 mt-5">
+              <div class="max-w-[1440px] text-center">
+              <h1 class="text-3xl">MANAGING DIRECTOR & LEAD CONSULTANT MESSAGE</h1>
+              <h4 class="text-xl text-blue-600">Welcome Message from Managing Director & Lead Consultant</h4>
+              </div>
+            </div>
+            <div class="flex gap-4 mt-6 mx-auto justify-center px-10">
+                <div>
+                  <img src="img/brig gen md anwar shafique.jpg" alt="default" class="border-green-800 border-2 w-xs">
+                </div>
+                <div class="text-left">
+                    <h4 class="text-red-600">BRIGADIER GENERAL MD. ANWAR SHAFIQUE</h4>
+                    <h5 class="text-red-600">(retd), NDC, PSC, PGD (USA), MSS, MBA, MPHIL, PHD</h5>
+                    <h5>Managging Director & Lead Consultant</h5>
+                    <h5>Centre for Innovation and Research</h5>
+                </div>
+              </div>
+              <div class="flex justify-center items-center text-center mt-10">
+                <svg width="300" height="40" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" class="text-teal-500">
+                    <line x1="10" y1="10" x2="90" y2="10" stroke="currentColor" stroke-width="2"/>
+                    <polygon points="50,15 45,10 55,10" fill="currentColor"/>
+                    <circle cx="10" cy="10" r="2" fill="currentColor"/>
+                    <circle cx="90" cy="10" r="2" fill="currentColor"/>
+                </svg>
+            </div>
+            <div id="whatwedo" class="grid md:grid-cols-7 grid-cols-3 mt-8 text-justify gap-4">
+            <!-- What we do -->
+             <div class="md:col-span-4 col-span-3 md:order-1 order-2">
+               <h1 class="text-2xl font-bold text-center">What We Do</h1>
+               <p>As committed to contributing towards sustainable development in Bangladesh, CIR undertakes
+                  Innovation, research and analyses, organises workshop, seminare and dialogues, brings out
+                  publications, enhances outreach of its activities and supports capacity building of relevant
+                  stakeholders. CIR’s research outputs have contributed to important policy changes and initiatives
+                  that were geared in support of good governance, sound economic management and interests of
+                  marginalised groups in society as well as developing the nation. CIR’s activism is operationalised
+                  by generating knowledge through its innovation, research and analyses, policy appreciation and
+                  influencing at national, regional and international levels, and capacity building for policymakers
+                  and other important stakeholder groups.</p>
+                  <br>
+              <p>At CIR, we aim to continue increasing our practical ability to generate results and evidence
+                  together as we share the challenges of transformative change with the clients on a global scale.</p>
+             </div>
+             <div class="col-span-4 md:col-span-3 order-1 md:order-2 flex justify-center items-center">
+                <img src="./img/what_we_do.jpg" alt="" class="max-h-80 w-auto">
+              </div>
+            </div>
+            <div class="text-justify w-full mx-auto mt-8 px-10">
+              <h1 class="font-bold text-3xl">Services</h1>
+              <h1 class="text-4xl text-justify font-bold mt-5">INNOVATION AND RESEARCH DOMAIN</h1>
+              <ul class="list-disc px-5">
+                  <li>Innovation and Research for Education</li>
+                  <li>Security & Strategic Analysis</li>
+                  <li>Science & Technological Advancement</li>
+                  <li>Inclusive Growth and Labour Issues</li>
+                  <li>Gender, Human Development and Social Protection</li>
+                  <li>Economic Performance Analysis</li>
+                  <li>Trade, Cooperation and Global Integration</li>
+                  <li>Resource Mobilisation and Fiscal Policies</li>
+                  <li>Investment Promotion, Infrastructure and Enterprise Development</li>
+                  <li>Climate Change and Environment Issues</li>
+                  <li>Governance and Institution</li>
+              </ul>
+        </div>
+        </div>
+    </main>
+<!-- Contact Us Card -->
+<div id="contact" class="bg-blue-50 py-10 mt-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+    
+    <!-- Contact Info -->
+    <div>
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">Contact Us</h2>
+      <p class="mb-2 text-gray-700">📍 123 Main Street, Dhaka, Bangladesh</p>
+      <p class="mb-2 text-gray-700">📞 +880 123-456-789</p>
+      <p class="mb-2 text-gray-700">✉️ info@yourdomain.com</p>
+      <p class="text-gray-700">🕒 Mon - Fri: 9:00 AM - 5:00 PM</p>
+    </div>
+
+    <!-- Contact Form Link -->
+    <div>
+      <h3 class="text-xl font-semibold text-blue-700 mb-3">Have a message?</h3>
+      <p class="mb-4 text-gray-700">We'd love to hear from you. Click below to reach our contact form.</p>
+      <a href="./contact-form.html" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
+        Go to Contact Form
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-blue-500/50 text-white py-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+      
+      <!-- Logo / Brand -->
+      <div class="flex items-center space-x-3">
+        <img src="/img/logo.png" alt="Logo" class="h-10 w-auto object-contain" />
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="./index.html#whatwedo" class="hover:underline">About Us</a>
+        <a href="./news_and_events.html" class="hover:underline">News & Events</a>
+        <a href="./gallery.html" class="hover:underline">Gallery</a>
+        <a href="./index.html#contact" class="hover:underline">Contact</a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-sm text-center md:text-right">
+        <p>© 2025 Center for Innovation & Research. All rights reserved.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+    <script>
+        // Toggle mobile menu
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Toggle submenus
+        document.querySelectorAll('.toggle-submenu').forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const submenu = document.getElementById(targetId);
+            submenu.classList.toggle('hidden');
+        });
+        });
+    </script>
+</body>
+</html>
