@@ -23,9 +23,31 @@
     <header>
     <nav class="bg-white shadow-md fixed top-0 w-full z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="hidden md:flex md:justify-between md:items-center md:max-w-[1440px] mx-auto px-4">
+          <!-- Left: Logo + Title -->
+          <div class="flex items-center gap-3">
+            <!-- Logo -->
+            <a href="./index.html" class="text-xl font-bold text-blue-600">
+              <img src="./img/logo.png" class="h-20 w-auto" alt="Logo">
+            </a>
+            <!-- Title -->
+            <h1 class="font-bold text-2xl text-green-500 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              Centre for Innovation and Research (CIR)
+            </h1>
+          </div>
+
+          <!-- Right: Slogan -->
+          <div class="max-w-xl text-center">
+            <h1 class="font-extrabold text-2xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              Wisdom for the Service of Humanity <br> through Creativity
+            </h1>
+          </div>
+        </div>
+
+        
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
-          <div class="flex-shrink-0">
+          <div class="md:hidden flex-shrink-0">
             <a href="./index.html" class="text-xl font-bold text-blue-600"><img src="./img/logo.png" class="left-0 h-16" alt=""></a>
           </div>
 
@@ -58,13 +80,10 @@
             <li class="relative group">
               <p class="hover:text-blue-600 py-2 px-3 inline-block">Publications</p>
               <ul class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md w-64 z-10">
-                <li><a href="./innovation_and_research_domain.html" class="block px-4 py-2 hover:bg-gray-100">Innovation & Research Domain</a></li>
-                <li><a href="./innovation_and_development.html" class="block px-4 py-2 hover:bg-gray-100">Innovation & Development</a></li>
-                <li><a href="./research_evaluation.html" class="block px-4 py-2 hover:bg-gray-100">Research Evaluation</a></li>
-                <li><a href="./training.html" class="block px-4 py-2 hover:bg-gray-100">Training</a></li>
-                <li><a href="./technical_assistance.html" class="block px-4 py-2 hover:bg-gray-100">Technical Assistance</a></li>
-                <li><a href="./market_analysis.html" class="block px-4 py-2 hover:bg-gray-100">Market Analysis</a></li>
-                <li><a href="./surveys.html" class="block px-4 py-2 hover:bg-gray-100">Surveys</a></li>
+                <li><a href="./book.html" class="block px-4 py-2 hover:bg-gray-100">Book</a></li>
+                <li><a href="./journal.html" class="block px-4 py-2 hover:bg-gray-100">Journal</a></li>
+                <li><a href="./coloumn.html" class="block px-4 py-2 hover:bg-gray-100">Columns</a></li>
+                <li><a href="./poster.html" class="block px-4 py-2 hover:bg-gray-100">Poster</a></li>
               </ul>
             </li>
 
@@ -72,10 +91,14 @@
             <li class="relative group">
               <p class="hover:text-blue-600 py-2 px-3 inline-block">Services</p>
               <ul class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md w-48 z-10">
-                <li><a href="./book.html" class="block px-4 py-2 hover:bg-gray-100">Book</a></li>
-                <li><a href="./journal.html" class="block px-4 py-2 hover:bg-gray-100">Journal</a></li>
-                <li><a href="./coloumn.html" class="block px-4 py-2 hover:bg-gray-100">Columns</a></li>
-                <li><a href="./poster.html" class="block px-4 py-2 hover:bg-gray-100">Poster</a></li>
+                <li><a href="./innovation_and_research_domain.html" class="block px-4 py-2 hover:bg-gray-100">Innovation & Research Domain</a></li>
+                <li><a href="./innovation_and_development.html" class="block px-4 py-2 hover:bg-gray-100">Innovation & Development</a></li>
+                <li><a href="./research_evaluation.html" class="block px-4 py-2 hover:bg-gray-100">Research Evaluation</a></li>
+                <li><a href="./training.html" class="block px-4 py-2 hover:bg-gray-100">Training</a></li>
+                <li><a href="./technical_assistance.html" class="block px-4 py-2 hover:bg-gray-100">Technical Assistance</a></li>
+                <li><a href="./market_analysis.html" class="block px-4 py-2 hover:bg-gray-100">Market Analysis</a></li>
+                <li><a href="./surveys.html" class="block px-4 py-2 hover:bg-gray-100">Surveys</a></li>
+                
               </ul>
             </li>
 
@@ -104,6 +127,17 @@
         <div>
           <button class="w-full text-left py-2 font-medium toggle-submenu" data-target="publications-submenu">Publications</button>
           <div id="publications-submenu" class="hidden pl-4 space-y-1">
+            <a href="./book.html" class="block">Book</a>
+            <a href="./journal.html" class="block">Journal</a>
+            <a href="./coloumn.html" class="block">Columns</a>
+            <a href="./poster.html" class="block">Poster</a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <button class="w-full text-left py-2 font-medium toggle-submenu" data-target="services-submenu">Services</button>
+          <div id="services-submenu" class="hidden pl-4 space-y-1">
             <a href="./innovation_and_research_domain.html" class="block">Innovation & Research Domain</a>
             <a href="./innovation_and_development.html" class="block">Innovation & Development</a>
             <a href="./research_evaluation.html" class="block">Research Evaluation</a>
@@ -114,17 +148,6 @@
           </div>
         </div>
 
-        <!-- Services -->
-        <div>
-          <button class="w-full text-left py-2 font-medium toggle-submenu" data-target="services-submenu">Services</button>
-          <div id="services-submenu" class="hidden pl-4 space-y-1">
-            <a href="./book.html" class="block">Book</a>
-            <a href="./journal.html" class="block">Journal</a>
-            <a href="./coloumn.html" class="block">Columns</a>
-            <a href="./poster.html" class="block">Poster</a>
-          </div>
-        </div>
-
         <a href="./news_and_events.html" class="block py-2">News & Events</a>
         <a href="./gallery.html" class="block py-2">Gallery</a>
         <a href="./index.html#contact" class="block py-2">Contact</a>
@@ -132,7 +155,7 @@
     </nav>
   </header>
     
-    <main class="flex flex-col items-center min-h-screen px-4 pt-20">
+    <main class="flex flex-col items-center min-h-screen px-4 pt-20 md:pt-40">
         <div class="max-w-[1440px] mt-5">
             <div class="text-center">
                 <!-- Heading and Purpose -->
@@ -252,17 +275,25 @@
               <h4 class="text-xl text-blue-600">Welcome Message from Managing Director & Lead Consultant</h4>
               </div>
             </div>
-            <div class="flex gap-4 mt-6 mx-auto justify-center px-10">
-                <div>
-                  <img src="img/brig gen md anwar shafique.jpg" alt="default" class="border-green-800 border-2 w-xs">
-                </div>
-                <div class="text-left">
-                    <h4 class="text-red-600">BRIGADIER GENERAL MD. ANWAR SHAFIQUE</h4>
-                    <h5 class="text-red-600">(retd), NDC, PSC, PGD (USA), MSS, MBA, MPHIL, PHD</h5>
-                    <h5>Managging Director & Lead Consultant</h5>
-                    <h5>Centre for Innovation and Research</h5>
-                </div>
+            <div>
+              <div class="p-4">
+                <img src="img/brig gen md anwar shafique.jpg" alt="default" class="float-left mr-4 mb-4 md:max-w-xs h-auto object-scale-down">
+                <p class="text-justify">Welcome to the <b>Center for Innovation and Research (CIR)!</b> It is with great enthusiasm that I embrace you at the <b>CIR</b>-a hub where creativity meets cutting-edge technology, and ideas transform into impactful solutions. It fills me with immense pride and excitement to greet you as Managing Director and Lead Consultant of this dynamic hub.
+The ambition of the center is to create knowledge through academic and applied research and disseminate acquired knowledge through training and publication. CIR, an emerging research organization. It’s a research, training and human development center which works for the greater well-being of society for achieving sustainable development goals and more.
+Here, we are driven by a shared vision: to push the boundaries of knowledge and translate groundbreaking ideas into tangible solutions that benefit our community and beyond. We believe in the power of collaboration, bringing together bright minds from diverse disciplines to spark creativity and foster impactful research.
+This center is more than just a space; it's a vibrant ecosystem where curiosity is nurtured, experimentation is encouraged, and innovation thrives. We are committed to providing the resources, support, and environment necessary for our service holders, ‍students, researchers and other stakeholders to excel. I encourage all of them to explore the opportunities within these walls, to connect with your peers, and to let your passion drive your pursuits.
+At CIR, we are committed to fostering a culture of curiosity, collaboration, and forward-thinking. Our mission is to create an ecosystem that nurtures curiosity, drives impactful research, and accelerates innovation across various fields. By collaborating with academia, industry, and communities, we aim to generate transformative solutions that address current and future challenges, enhance knowledge, and contribute to the sustainable development of society and the economy that address real-world challenges. Serving the growing demand of nation of Bangladesh for a demand-driven and accountable development process by stimulating information, generating knowledge and influencing policymaking through innovation and research.
+I am confident that together, we will achieve remarkable things. I look forward to witnessing the groundbreaking discoveries and transformative innovations that will emerge from the Center for Innovation and Research.
+Welcome on the knowledge ship! Let's shape the future together.
+I invite you to join us on this exciting journey-let’s innovate, inspire, and impact the world.</p>
+<br>
+<h4><b>Warrm Regards,</b></h4>
+<h1 class="text-purple-700 text-xl"><b>BRIGADIER GENERAL MD. ANWAR SHAFIQUE</b></h1>
+<h5 class="text-purple-700 text-xs font-bold">(retd), NDC, PSC, PGD (USA), MSS, MBA, MPHIL, PHD</h5>
+<h3>Managing Director & Lead Consultant</h3>
+<h3>Center for Innovation and Research</h3>
               </div>
+            </div>
               <div class="flex justify-center items-center text-center mt-10">
                 <svg width="300" height="40" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" class="text-teal-500">
                     <line x1="10" y1="10" x2="90" y2="10" stroke="currentColor" stroke-width="2"/>
@@ -309,7 +340,43 @@
                   <li>Governance and Institution</li>
               </ul>
         </div>
+        <!-- News in the media -->
+        <div class="w-full mt-5">
+          <!-- Label -->
+          <span class="bg-orange-500 text-white text-sm font-medium px-3 py-1">
+            NEWS IN THE MEDIA
+          </span>
+          <!-- Line -->
+          <div class="flex-1 h-0.5 bg-orange-500"></div>
+          <a href="https://www.ittefaq.com.bd/732153" target="_blank"><img src="./img/ittefaq.png" alt="" class="mt-2"></a>
+          <a href="https://www.dailyamardesh.com/feature/amd96irhts8vr" target="_blank"><img src="./img/amardeshonline.png" alt="" class="mt-2"></a>
+          
         </div>
+        <!-- Recent Publications -->
+         <div class="w-full mt-5">
+          <!-- Label -->
+          <span class="bg-amber-900 text-white text-sm font-medium px-3 py-1">
+            RECENT PUBLICATIONS
+          </span>
+          
+          <!-- Line -->
+          <div class="flex-1 h-0.5 bg-amber-900"></div>
+          <a href="https://ftp.uplbooks.com.bd/shop/9789849775874-bangladesh-india-cross-border-trade-22681?tag=5#attr=" target="_blank"><img src="./img/Book1.jpg" alt="" class="max-h-80 mt-2"></a>
+        </div>
+         
+        <!-- Public Opinion -->
+         <div class="w-full mt-5">
+          <!-- Label -->
+          <span class="bg-blue-600 text-white text-sm font-medium px-3 py-1">
+            OPINIONS
+          </span>
+          
+          <!-- Line -->
+          <div class="flex-1 h-0.5 bg-blue-600"></div>
+        </div>
+        </div>
+        
+    
     </main>
 <!-- Contact Us Card -->
 <div id="contact" class="bg-blue-50 py-10 mt-16">
@@ -318,9 +385,10 @@
     <!-- Contact Info -->
     <div>
       <h2 class="text-2xl font-bold text-blue-700 mb-4">Contact Us</h2>
-      <p class="mb-2 text-gray-700">📍 123 Main Street, Dhaka, Bangladesh</p>
-      <p class="mb-2 text-gray-700">📞 +880 123-456-789</p>
-      <p class="mb-2 text-gray-700">✉️ info@yourdomain.com</p>
+      <p class="mb-2 text-gray-700">📍 House: 56, Road: 502, Sector: 17
+     Jolshiri Abashon, Purbachal, Bangladesh</p>
+      <p class="mb-2 text-gray-700">📞 +880 1710715032, +880 01790008064</p>
+      <p class="mb-2 text-gray-700">✉️ cirbd.org@gmail.com</p>
       <p class="text-gray-700">🕒 Mon - Fri: 9:00 AM - 5:00 PM</p>
     </div>
 
