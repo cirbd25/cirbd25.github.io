@@ -8,153 +8,102 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <header>
-    <nav class="bg-white shadow-md fixed top-0 w-full z-50">
+<body class="bg-slate-50 text-slate-900">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-indigo-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+  <header>
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed top-0 w-full z-50 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="hidden md:flex md:justify-between md:items-center md:max-w-[1440px] mx-auto px-4">
-          <!-- Left: Logo + Title -->
-          <div class="flex items-center gap-3">
-            <!-- Logo -->
-            <a href="./index.html" class="text-xl font-bold text-blue-600">
-              <img src="./img/logo.png" class="h-20 w-auto" alt="Logo">
-            </a>
-            <!-- Title -->
-            <h1 class="font-bold text-2xl text-green-500 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-              Centre for Innovation and Research (CIR)
-            </h1>
-          </div>
-
-          <!-- Right: Slogan -->
-          <div class="max-w-xl text-center">
-            <h1 class="font-extrabold text-2xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-              Wisdom for the Service of Humanity <br> through Creativity
-            </h1>
-          </div>
-        </div>
-
-        
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
-          <div class="md:hidden flex-shrink-0">
-            <a href="./index.html" class="text-xl font-bold text-blue-600"><img src="./img/logo.png" class="left-0 h-16" alt=""></a>
-          </div>
-
-          <!-- Hamburger Button -->
-          <div class="md:hidden">
-            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+        <div class="flex items-center justify-between py-3 md:py-4">
+          <!-- Logo + Title -->
+          <a href="./index.html" class="flex items-center gap-3 transition hover:opacity-90">
+            <img src="./img/logo.png" class="h-12 md:h-14 w-auto" alt="CIR logo">
+            <span class="hidden sm:flex flex-col border-l pl-3 md:pl-4 border-slate-300 leading-tight">
+              <span class="font-bold text-base md:text-lg text-slate-800 tracking-tight">Centre for Innovation and Research (CIR)</span>
+              <span class="hidden lg:block text-xs text-indigo-700 italic font-medium mt-0.5">"Wisdom for the Service of Humanity through Creativity"</span>
+            </span>
+          </a>
 
           <!-- Desktop Nav -->
-          <ul class="hidden md:flex space-x-4 items-center text-gray-700 relative">
-            <li><a href="./index.html" class="hover:text-blue-600 py-2 px-3">Home</a></li>
+          <ul class="hidden xl:flex items-center gap-0.5 text-slate-600 font-medium text-sm whitespace-nowrap">
+            <li><a href="./index.html" class="hover:text-indigo-600 py-2 px-2.5 rounded-lg transition">Home</a></li>
 
             <!-- About Us Dropdown -->
             <li class="relative group">
-              <p class="hover:text-blue-600 py-2 px-3 inline-block">About Us</p>
-              <ul class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md w-48 z-10">
-                <li><a href="./index.html#mdmessage" class="block px-4 py-2 hover:bg-gray-100">MD Message</a></li>
-                <li><a href="./index.html#whatwedo" class="block px-4 py-2 hover:bg-gray-100">What We Do</a></li>
-                <li><a href="./our_team.html" class="block px-4 py-2 hover:bg-gray-100">Our Team</a></li>
+              <button class="hover:text-indigo-600 py-2 px-2.5 rounded-lg flex items-center gap-1 transition" aria-haspopup="true">
+                About Us <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+              </button>
+              <ul class="absolute top-full left-0 hidden group-hover:block group-focus-within:block hover:block bg-white shadow-xl rounded-xl border border-slate-100 w-48 z-50 py-2">
+                <li><a href="./index.html#mdmessage" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">MD Message</a></li>
+                <li><a href="./index.html#whatwedo" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">What We Do</a></li>
+                <li><a href="./our_team.html" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">Our Team</a></li>
               </ul>
             </li>
 
             <!-- Publications Dropdown -->
             <li class="relative group">
-              <p class="hover:text-blue-600 py-2 px-3 inline-block">Publications</p>
-              <ul class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md w-64 z-10">
-                <li><a href="./book.html" class="block px-4 py-2 hover:bg-gray-100">Book</a></li>
-                <li><a href="./journal.html" class="block px-4 py-2 hover:bg-gray-100">Journal</a></li>
-                <li><a href="./coloumn.html" class="block px-4 py-2 hover:bg-gray-100">Columns</a></li>
-                <li><a href="./poster.html" class="block px-4 py-2 hover:bg-gray-100">Poster</a></li>
+              <button class="hover:text-indigo-600 py-2 px-2.5 rounded-lg flex items-center gap-1 transition" aria-haspopup="true">
+                Publications <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+              </button>
+              <ul class="absolute top-full left-0 hidden group-hover:block group-focus-within:block hover:block bg-white shadow-xl rounded-xl border border-slate-100 w-48 z-50 py-2">
+                <li><a href="./book.html" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">Book</a></li>
+                <li><a href="./journal.html" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">Journal</a></li>
+                <li><a href="./columns.html" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">Columns</a></li>
               </ul>
             </li>
 
-            <!-- Services Dropdown -->
-            <li class="relative group">
-              <p class="hover:text-blue-600 py-2 px-3 inline-block">Services</p>
-              <ul class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-md w-48 z-10">
-                <li><a href="./innovation_and_research_domain.html" class="block px-4 py-2 hover:bg-gray-100">Innovation & Research Domain</a></li>
-                <li><a href="./innovation_and_development.html" class="block px-4 py-2 hover:bg-gray-100">Innovation & Development</a></li>
-                <li><a href="./research_evaluation.html" class="block px-4 py-2 hover:bg-gray-100">Research Evaluation</a></li>
-                <li><a href="./training.html" class="block px-4 py-2 hover:bg-gray-100">Training</a></li>
-                <li><a href="./technical_assistance.html" class="block px-4 py-2 hover:bg-gray-100">Technical Assistance</a></li>
-                <li><a href="./market_analysis.html" class="block px-4 py-2 hover:bg-gray-100">Market Analysis</a></li>
-                <li><a href="./surveys.html" class="block px-4 py-2 hover:bg-gray-100">Surveys</a></li>
-                
-              </ul>
-            </li>
-
-            <li><a href="./news_and_events.html" class="hover:text-blue-600 py-2 px-3">News & Events</a></li>
-            <li><a href="./gallery.html" class="hover:text-blue-600 py-2 px-3">Gallery</a></li>
-            <li><a href="./index.html#contact" class="hover:text-blue-600 py-2 px-3">Contact</a></li>
+            <li><a href="./index.html#news-media" class="hover:text-indigo-600 py-2 px-2.5 rounded-lg transition">News & Events</a></li>
+            <li><a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 py-2 px-3 rounded-full transition">CIR Journal</a></li>
+            <li><a href="./index.html#contact" class="bg-indigo-600 text-white hover:bg-indigo-700 py-2 px-3.5 rounded-full transition shadow-md">Contact</a></li>
           </ul>
+
+          <!-- Mobile Hamburger -->
+          <button id="menu-toggle" type="button" class="xl:hidden text-slate-700 hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+            <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-gray-700">
+      <div id="mobile-menu" class="xl:hidden hidden px-4 pb-6 space-y-4 text-slate-700 bg-white border-t border-slate-100">
         <a href="./index.html" class="block py-2">Home</a>
-
-        <!-- About Us -->
         <div>
-          <button class="w-full text-left py-2 font-medium toggle-submenu" data-target="about-submenu">About Us</button>
-          <div id="about-submenu" class="hidden pl-4 space-y-1">
-            <a href="./index.html#mdmessage" class="block">MD Message</a>
-            <a href="./index.html#whatwedo" class="block">What We Do</a>
-            <a href="./our_team.html" class="block">Our Team</a>
+          <button type="button" class="w-full text-left py-2 font-semibold toggle-submenu flex justify-between items-center" data-target="about-submenu" aria-expanded="false">
+            About Us <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i>
+          </button>
+          <div id="about-submenu" class="hidden pl-4 space-y-1 text-slate-600">
+            <a href="./index.html#mdmessage" class="block py-1">MD Message</a>
+            <a href="./index.html#whatwedo" class="block py-1">What We Do</a>
+            <a href="./our_team.html" class="block py-1">Our Team</a>
           </div>
         </div>
-
-        <!-- Publications -->
         <div>
-          <button class="w-full text-left py-2 font-medium toggle-submenu" data-target="publications-submenu">Publications</button>
-          <div id="publications-submenu" class="hidden pl-4 space-y-1">
-            <a href="./book.html" class="block">Book</a>
-            <a href="./journal.html" class="block">Journal</a>
-            <a href="./coloumn.html" class="block">Columns</a>
-            <a href="./poster.html" class="block">Poster</a>
+          <button type="button" class="w-full text-left py-2 font-semibold toggle-submenu flex justify-between items-center" data-target="publications-submenu" aria-expanded="false">
+            Publications <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i>
+          </button>
+          <div id="publications-submenu" class="hidden pl-4 space-y-1 text-slate-600">
+            <a href="./book.html" class="block py-1">Book</a>
+            <a href="./journal.html" class="block py-1">Journal</a>
+            <a href="./columns.html" class="block py-1">Columns</a>
           </div>
         </div>
-
-        <!-- Services -->
-        <div>
-          <button class="w-full text-left py-2 font-medium toggle-submenu" data-target="services-submenu">Services</button>
-          <div id="services-submenu" class="hidden pl-4 space-y-1">
-            <a href="./innovation_and_research_domain.html" class="block">Innovation & Research Domain</a>
-            <a href="./innovation_and_development.html" class="block">Innovation & Development</a>
-            <a href="./research_evaluation.html" class="block">Research Evaluation</a>
-            <a href="./training.html" class="block">Training</a>
-            <a href="./technical_assistance.html" class="block">Technical Assistance</a>
-            <a href="./market_analysis.html" class="block">Market Analysis</a>
-            <a href="./surveys.html" class="block">Surveys</a>
-          </div>
-        </div>
-
-        <a href="./news_and_events.html" class="block py-2">News & Events</a>
-        <a href="./gallery.html" class="block py-2">Gallery</a>
-        <a href="./index.html#contact" class="block py-2">Contact</a>
+        <a href="./index.html#news-media" class="block py-2">News & Events</a>
+        <a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="block py-2 font-semibold text-indigo-600">CIR Journal</a>
+        <a href="./index.html#contact" class="block py-2 font-bold text-indigo-600">Contact Us</a>
       </div>
     </nav>
   </header>
-    <main class="flex flex-col items-center min-h-screen px-4 pt-20 md:pt-40">
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-10">
+    <main id="main-content" class="flex flex-col items-center min-h-screen px-4 pt-28 md:pt-36">
+        <h1 class="text-3xl font-bold text-center text-indigo-700 mb-10">
     Journal Publications
   </h1>
 
   <!-- Brigadier General -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+    <h2 class="text-2xl font-semibold text-slate-800 mb-4">
       Significant Publications by Brigadier General (Retd.) Md Anwar Shafique, ndc, psc, PGD (USA), MBA, MSS, MPhil, PhD
     </h2>
 
-    <ul class="list-disc list-inside space-y-2 text-gray-700">
+    <ul class="list-disc list-inside space-y-2 text-slate-700">
       <li>“Preservation of our Culture and National Security” - <em>Army Journal</em> (2004)</li>
       <li>“Reorganization of Formation Intelligence Outfit” - <em>AFD Journal</em> (2004)</li>
       <li>“Empirical Study on the Informal Cross Border Trade Nexus Between Bangladesh-India Land Borders: Bangladesh Perspective” - <em>ICRRD Journal of Malaysia</em> (2022)</li>
@@ -170,11 +119,11 @@
 
   <!-- Liton Chandra Sarkar -->
   <section>
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+    <h2 class="text-2xl font-semibold text-slate-800 mb-4">
       Significant Publications by Liton Chandra Sarkar
     </h2>
 
-    <div class="mb-6 text-gray-700">
+    <div class="mb-6 text-slate-700">
       <p><strong>Research & Publications Summary:</strong></p>
       <ul class="list-disc list-inside ml-4">
         <li>Journals: 15 (International: 08 + Local: 07)</li>
@@ -187,18 +136,18 @@
       </ul>
     </div>
 
-    <h3 class="text-xl font-semibold text-gray-800 mb-3">Journal Articles</h3>
+    <h3 class="text-xl font-semibold text-slate-800 mb-3">Journal Articles</h3>
 
-    <ol class="list-decimal list-inside space-y-3 text-gray-700">
+    <ol class="list-decimal list-inside space-y-3 text-slate-700">
       <li>
         Sarkar, Liton Chandro (2024). <em>Negotiating Tradition: The Santal Community, NGOs, and Cultural Change in Bangladesh</em>. 
         SSRN / Elsevier / Scopus Indexed.  
-        <a href="https://ssrn.com/abstract=4823552" target="_blank" class="text-blue-600 hover:underline">SSRN Link</a>
+        <a href="https://ssrn.com/abstract=4823552" target="_blank" class="text-indigo-600 hover:underline">SSRN Link</a>
       </li>
       <li>
         Sarkar, Liton Chandro (2022). <em>Impact of Leverage & Capital Adequacy on Performance of NBFIs in Bangladesh</em>. 
         <strong>Athens Journal of Business & Economics (AJBE)</strong>, e-ISSN: 2241-794X.  
-        <a href="https://doi.org/10.30958/ajbe.8-2-4" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+        <a href="https://doi.org/10.30958/ajbe.8-2-4" target="_blank" class="text-indigo-600 hover:underline">DOI</a>
       </li>
       <li>
         Sarkar, Liton Chandro & Shafique, Brig. Gen. Md. Anwar (2022). 
@@ -212,7 +161,7 @@
       <li>
         Sarkar, Liton Chandro (2020). <em>Industry 4.0 to Education 4.0: A New Paradigm</em>. 
         IJARBSS, E-ISSN: 2222-6990.  
-        <a href="https://doi.org/10.268033/ijarbss.19.1.9" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+        <a href="https://doi.org/10.268033/ijarbss.19.1.9" target="_blank" class="text-indigo-600 hover:underline">DOI</a>
       </li>
       <li>
         Sarkar, Liton Chandro & Hamid, Md. Abdul (2020). <em>The Santal Community: Culture, Tradition & NGOs</em>. 
@@ -246,7 +195,7 @@
       <li>
         Sarkar, Liton Chandro (2014). <em>Management Accounting Practices in Bangladesh</em>. 
         Malaysian Management Journal, ISSN: 0128-6226.  
-        <a href="http://mmj.uum.edu.my/journal.html#jissue" target="_blank" class="text-blue-600 hover:underline">Weblink</a>
+        <a href="http://mmj.uum.edu.my/journal.html#jissue" target="_blank" class="text-indigo-600 hover:underline">Weblink</a>
       </li>
       <li>
         Sarkar, Liton Chandro (2013). <em>Understanding RMG Fire Safety Risk Assessments</em>. 
@@ -260,72 +209,84 @@
   </section>
     </main>
 <!-- Contact Us Card -->
-<div id="contact" class="bg-blue-50 py-10 mt-16">
-  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
-    
-    <!-- Contact Info -->
-    <div>
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">Contact Us</h2>
-      <p class="mb-2 text-gray-700">📍 House: 56, Road: 502, Sector: 17
-     Jolshiri Abashon, Purbachal, Bangladesh</p>
-      <p class="mb-2 text-gray-700">📞 +880 1710715032, +880 01790008064</p>
-      <p class="mb-2 text-gray-700">✉️ cirbd.org@gmail.com</p>
-      <p class="text-gray-700">🕒 Mon - Fri: 9:00 AM - 5:00 PM</p>
-    </div>
+  <div id="contact" class="bg-indigo-50 py-16 md:py-20 mt-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
 
-    <!-- Contact Form Link -->
-    <div>
-      <h3 class="text-xl font-semibold text-blue-700 mb-3">Have a message?</h3>
-      <p class="mb-4 text-gray-700">We'd love to hear from you. Click below to reach our contact form.</p>
-      <a href="./contact-form.html" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
-        Go to Contact Form
-      </a>
-    </div>
-
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="bg-blue-500/50 text-white py-8">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-      
-      <!-- Logo / Brand -->
-      <div class="flex items-center space-x-3">
-        <img src="/img/logo.png" alt="Logo" class="h-10 w-auto object-contain" />
+      <!-- Contact Info -->
+      <div class="space-y-4">
+        <h2 class="text-3xl font-bold text-indigo-900 mb-6">Get In Touch</h2>
+        <div class="space-y-3 text-slate-700">
+          <p class="flex items-center gap-3"> <span class="text-indigo-600" aria-hidden="true">📍</span> House: 56, Road: 502, Sector: 17, Jolshiri Abashon, Purbachal, Bangladesh</p>
+          <p class="flex items-center gap-3"> <span class="text-indigo-600" aria-hidden="true">📞</span> <a href="tel:+8801710715032" class="hover:text-indigo-700 hover:underline">+880 1710715032</a>, <a href="tel:+8801790008064" class="hover:text-indigo-700 hover:underline">+880 01790008064</a></p>
+          <p class="flex items-center gap-3"> <span class="text-indigo-600" aria-hidden="true">✉️</span> <a href="mailto:cirbd.org@gmail.com" class="hover:text-indigo-700 hover:underline">cirbd.org@gmail.com</a></p>
+          <p class="flex items-center gap-3"> <span class="text-indigo-600" aria-hidden="true">🕒</span> Mon - Fri: 9:00 AM - 5:00 PM</p>
+        </div>
       </div>
 
-      <!-- Navigation Links -->
-      <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="./index.html#whatwedo" class="hover:underline">About Us</a>
-        <a href="./news_and_events.html" class="hover:underline">News & Events</a>
-        <a href="./gallery.html" class="hover:underline">Gallery</a>
-        <a href="./index.html#contact" class="hover:underline">Contact</a>
+      <!-- Contact CTA -->
+      <div class="bg-white p-8 rounded-3xl shadow-sm border border-indigo-100">
+        <h3 class="text-xl font-bold text-indigo-900 mb-4">Have a message?</h3>
+        <p class="mb-6 text-slate-600">We'd love to hear from you. Send us an email and our team will get back to you shortly.</p>
+        <a href="mailto:cirbd.org@gmail.com"
+          class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-200">
+          Email Us
+        </a>
       </div>
-
-      <!-- Copyright -->
-      <div class="text-sm text-center md:text-right">
-        <p>© 2025 Center for Innovation & Research. All rights reserved.</p>
-      </div>
-
     </div>
   </div>
-</footer>
-    <script>
-        // Toggle mobile menu
-        document.getElementById('menu-toggle').addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
 
-        // Toggle submenus
-        document.querySelectorAll('.toggle-submenu').forEach(button => {
-        button.addEventListener('click', () => {
-            const targetId = button.getAttribute('data-target');
-            const submenu = document.getElementById(targetId);
-            submenu.classList.toggle('hidden');
-        });
-        });
-    </script>
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-6">
+
+        <!-- Logo / Brand -->
+        <a href="./index.html" class="flex items-center gap-3">
+          <img src="./img/logo.png" alt="CIR logo" class="h-8 w-auto object-contain" />
+          <span class="font-semibold text-white text-sm">Centre for Innovation and Research</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav aria-label="Footer navigation" class="flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-400">
+          <a href="./index.html" class="hover:text-white transition">Home</a>
+          <a href="./index.html#whatwedo" class="hover:text-white transition">About Us</a>
+          <a href="./index.html#news-media" class="hover:text-white transition">News & Events</a>
+          <a href="./gallery.html" class="hover:text-white transition">Gallery</a>
+          <a href="./index.html#contact" class="hover:text-white transition">Contact</a>
+        </nav>
+
+        <!-- Copyright -->
+        <p class="text-sm text-slate-500 text-center md:text-right">© 2025 Centre for Innovation & Research. All rights reserved.</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      const menuIcon = menuToggle.querySelector('i');
+      menuToggle.addEventListener('click', () => {
+        const nowOpen = mobileMenu.classList.toggle('hidden') === false;
+        menuToggle.setAttribute('aria-expanded', String(nowOpen));
+        if (menuIcon) {
+          menuIcon.classList.toggle('fa-bars', !nowOpen);
+          menuIcon.classList.toggle('fa-xmark', nowOpen);
+        }
+      });
+    }
+
+    // Toggle submenus
+    document.querySelectorAll('.toggle-submenu').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const submenu = document.getElementById(targetId);
+        const nowOpen = submenu.classList.toggle('hidden') === false;
+        button.setAttribute('aria-expanded', String(nowOpen));
+      });
+    });
+  </script>
 </body>
 </html>
