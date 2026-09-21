@@ -7,154 +7,228 @@
     <link href="./output.css" rel="stylesheet">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 2px;
+      width: 0;
+      background: #33bdba;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .prose-cir p { margin-bottom: 1rem; }
+    .prose-cir ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
+    .prose-cir ul li { margin-bottom: .35rem; }
+
+    #mdmessage, #whatwedo, #news-media, #contact {
+      scroll-margin-top: 96px;
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-indigo-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
-  <header>
-    <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed top-0 w-full z-50 border-b border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between py-3 md:py-4">
-          <!-- Logo + Title -->
-          <a href="./index.html" class="flex items-center gap-3 transition hover:opacity-90">
-            <img src="./img/logo.png" class="h-12 md:h-14 w-auto" alt="CIR logo">
-            <span class="hidden sm:flex flex-col border-l pl-3 md:pl-4 border-slate-300 leading-tight">
-              <span class="font-bold text-base md:text-lg text-slate-800 tracking-tight">Centre for Innovation and Research (CIR)</span>
-              <span class="hidden lg:block text-xs text-indigo-700 italic font-medium mt-0.5">"Wisdom for the Service of Humanity through Creativity"</span>
-            </span>
-          </a>
+<body class="bg-slate-50 text-slate-700">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-brand-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
 
-          <!-- Desktop Nav -->
-          <ul class="hidden xl:flex items-center gap-0.5 text-slate-600 font-medium text-sm whitespace-nowrap">
-            <li><a href="./index.html" class="hover:text-indigo-600 py-2 px-2.5 rounded-lg transition">Home</a></li>
-
-            <!-- About Us Dropdown -->
-            <li class="relative group">
-              <button class="hover:text-indigo-600 py-2 px-2.5 rounded-lg flex items-center gap-1 transition" aria-haspopup="true">
-                About Us <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
-              </button>
-              <ul class="absolute top-full left-0 hidden group-hover:block group-focus-within:block hover:block bg-white shadow-xl rounded-xl border border-slate-100 w-48 z-50 py-2">
-                <li><a href="./index.html#mdmessage" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">MD Message</a></li>
-                <li><a href="./index.html#whatwedo" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">What We Do</a></li>
-                <li><a href="./our_team.html" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">Our Team</a></li>
-              </ul>
-            </li>
-
-            <!-- Publications Dropdown -->
-            <li class="relative group">
-              <button class="hover:text-indigo-600 py-2 px-2.5 rounded-lg flex items-center gap-1 transition" aria-haspopup="true">
-                Publications <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
-              </button>
-              <ul class="absolute top-full left-0 hidden group-hover:block group-focus-within:block hover:block bg-white shadow-xl rounded-xl border border-slate-100 w-48 z-50 py-2">
-                <li><a href="./book.html" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">Book</a></li>
-                <li><a href="./journal.html" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">Journal</a></li>
-                <li><a href="./columns.html" class="block px-4 py-2 hover:bg-slate-50 hover:text-indigo-600">Columns</a></li>
-              </ul>
-            </li>
-
-            <li><a href="./index.html#news-media" class="hover:text-indigo-600 py-2 px-2.5 rounded-lg transition">News & Events</a></li>
-            <li><a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 py-2 px-3 rounded-full transition">CIR Journal</a></li>
-            <li><a href="./index.html#contact" class="bg-indigo-600 text-white hover:bg-indigo-700 py-2 px-3.5 rounded-full transition shadow-md">Contact</a></li>
-          </ul>
-
-          <!-- Mobile Hamburger -->
-          <button id="menu-toggle" type="button" class="xl:hidden text-slate-700 hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
-            <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
-          </button>
-        </div>
+  <!-- Top utility bar -->
+  <div class="bg-navy-950 text-navy-100 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-brand-400"></span> Research &amp; Innovation</span>
+        <span class="hidden sm:inline">Dhaka, Bangladesh</span>
       </div>
+      <div class="flex items-center gap-4">
+        <a href="mailto:cirbd.org@gmail.com" class="hidden sm:inline hover:text-brand-300 transition">cirbd.org@gmail.com</a>
+        <span>+880 1710715032</span>
+      </div>
+    </div>
+  </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="xl:hidden hidden px-4 pb-6 space-y-4 text-slate-700 bg-white border-t border-slate-100">
-        <a href="./index.html" class="block py-2">Home</a>
+  <header class="bg-navy-900 text-white sticky top-0 z-50 shadow-lg shadow-navy-950/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand -->
+        <a href="./index.html" class="flex items-center gap-3 group">
+          <img src="./img/logo.png" class="h-12 w-12 object-contain drop-shadow" alt="CIR logo">
+          <div class="leading-tight">
+            <div class="font-serif font-bold text-base sm:text-lg tracking-wide group-hover:text-brand-300 transition">CIR</div>
+            <div class="text-[10px] sm:text-[11px] text-navy-200 uppercase tracking-wider">Centre for Innovation &amp; Research</div>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden xl:flex items-center gap-6 text-sm font-medium whitespace-nowrap">
+          <a href="./index.html" class="nav-link text-white">Home</a>
+
+          <div class="relative group">
+            <button class="nav-link text-navy-100 hover:text-white inline-flex items-center gap-1" aria-haspopup="true">
+              About Us <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+            </button>
+            <div class="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block">
+              <div class="w-56 bg-white text-slate-700 rounded-lg shadow-soft border border-slate-100 py-2">
+                <a href="./index.html#mdmessage" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">MD Message</a>
+                <a href="./index.html#whatwedo" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">What We Do</a>
+                <a href="./our_team.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">Our Team</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <button class="nav-link text-navy-100 hover:text-white inline-flex items-center gap-1" aria-haspopup="true">
+              Publications <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+            </button>
+            <div class="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block">
+              <div class="w-48 bg-white text-slate-700 rounded-lg shadow-soft border border-slate-100 py-2">
+                <a href="./book.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">Book</a>
+                <a href="./journal.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">Journal</a>
+                <a href="./columns.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">Columns</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="./index.html#news-media" class="nav-link text-navy-100 hover:text-white">News &amp; Events</a>
+          <a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="nav-link text-navy-100 hover:text-white inline-flex items-center gap-1">CIR Journal <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i></a>
+
+          <a href="./index.html#contact" class="ml-2 inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-4 py-2 rounded-md transition shadow">Contact</a>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-toggle" type="button" class="xl:hidden inline-flex items-center justify-center p-2 rounded-md text-navy-100 hover:text-white hover:bg-navy-800 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="xl:hidden hidden border-t border-navy-800 bg-navy-900">
+      <div class="px-4 py-3 space-y-1 text-sm">
+        <a href="./index.html" class="block px-3 py-2 rounded-md text-white hover:bg-navy-800">Home</a>
         <div>
-          <button type="button" class="w-full text-left py-2 font-semibold toggle-submenu flex justify-between items-center" data-target="about-submenu" aria-expanded="false">
+          <button type="button" class="w-full text-left px-3 py-2 rounded-md text-navy-100 hover:bg-navy-800 toggle-submenu flex justify-between items-center" data-target="about-submenu" aria-expanded="false">
             About Us <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i>
           </button>
-          <div id="about-submenu" class="hidden pl-4 space-y-1 text-slate-600">
-            <a href="./index.html#mdmessage" class="block py-1">MD Message</a>
-            <a href="./index.html#whatwedo" class="block py-1">What We Do</a>
-            <a href="./our_team.html" class="block py-1">Our Team</a>
+          <div id="about-submenu" class="hidden pl-6 space-y-1 text-navy-200">
+            <a href="./index.html#mdmessage" class="block px-3 py-2">MD Message</a>
+            <a href="./index.html#whatwedo" class="block px-3 py-2">What We Do</a>
+            <a href="./our_team.html" class="block px-3 py-2">Our Team</a>
           </div>
         </div>
         <div>
-          <button type="button" class="w-full text-left py-2 font-semibold toggle-submenu flex justify-between items-center" data-target="publications-submenu" aria-expanded="false">
+          <button type="button" class="w-full text-left px-3 py-2 rounded-md text-navy-100 hover:bg-navy-800 toggle-submenu flex justify-between items-center" data-target="publications-submenu" aria-expanded="false">
             Publications <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i>
           </button>
-          <div id="publications-submenu" class="hidden pl-4 space-y-1 text-slate-600">
-            <a href="./book.html" class="block py-1">Book</a>
-            <a href="./journal.html" class="block py-1">Journal</a>
-            <a href="./columns.html" class="block py-1">Columns</a>
+          <div id="publications-submenu" class="hidden pl-6 space-y-1 text-navy-200">
+            <a href="./book.html" class="block px-3 py-2">Book</a>
+            <a href="./journal.html" class="block px-3 py-2">Journal</a>
+            <a href="./columns.html" class="block px-3 py-2">Columns</a>
           </div>
         </div>
-        <a href="./index.html#news-media" class="block py-2">News & Events</a>
-        <a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="block py-2 font-semibold text-indigo-600">CIR Journal</a>
-        <a href="./index.html#contact" class="block py-2 font-bold text-indigo-600">Contact Us</a>
+        <a href="./index.html#news-media" class="block px-3 py-2 rounded-md text-navy-100 hover:bg-navy-800">News &amp; Events</a>
+        <a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="block px-3 py-2 rounded-md text-navy-100 hover:bg-navy-800">CIR Journal</a>
+        <a href="./index.html#contact" class="block px-3 py-2 rounded-md text-brand-300 font-semibold hover:bg-navy-800">Contact Us</a>
       </div>
-    </nav>
+    </div>
   </header>
     <main id="main-content" class="flex flex-col items-center min-h-screen px-4 pt-28 md:pt-36 pb-16">
       <div class="max-w-2xl w-full text-center py-16">
-        <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">Coming Soon</span>
-        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Innovation & Development</h1>
+        <span class="inline-block bg-brand-100 text-brand-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">Coming Soon</span>
+        <h1 class="font-serif text-3xl md:text-4xl font-extrabold text-navy-900 mb-4">Innovation & Development</h1>
         <p class="text-slate-600 text-lg leading-relaxed mb-8">
           We're preparing detailed information about our innovation and development services. In the meantime, feel free to explore the rest of the site or get in touch with our team.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="./index.html" class="bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition shadow-md shadow-indigo-200">Back to Home</a>
-          <a href="./index.html#contact" class="bg-white text-indigo-700 px-6 py-3 rounded-xl border border-indigo-200 hover:bg-indigo-50 transition">Contact Us</a>
+          <a href="./index.html" class="bg-brand-500 text-white px-6 py-3 rounded-xl hover:bg-brand-400 transition shadow-md shadow-brand-200">Back to Home</a>
+          <a href="./index.html#contact" class="bg-white text-brand-700 px-6 py-3 rounded-xl border border-brand-200 hover:bg-brand-50 transition">Contact Us</a>
         </div>
       </div>
     </main>
-<!-- Contact Us Card -->
-  <div id="contact" class="bg-indigo-50 py-16 md:py-20 mt-16">
+<!-- Contact -->
+  <div id="contact" class="bg-white py-16 md:py-20 border-t border-slate-100">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-
-      <!-- Contact Info -->
       <div class="space-y-4">
-        <h2 class="text-3xl font-bold text-indigo-900 mb-6">Get In Touch</h2>
-        <div class="space-y-3 text-slate-700">
-          <p class="flex items-center gap-3"> <span class="text-indigo-600" aria-hidden="true">📍</span> House: 56, Road: 502, Sector: 17, Jolshiri Abashon, Purbachal, Bangladesh</p>
-          <p class="flex items-center gap-3"> <span class="text-indigo-600" aria-hidden="true">📞</span> <a href="tel:+8801710715032" class="hover:text-indigo-700 hover:underline">+880 1710715032</a>, <a href="tel:+8801790008064" class="hover:text-indigo-700 hover:underline">+880 01790008064</a></p>
-          <p class="flex items-center gap-3"> <span class="text-indigo-600" aria-hidden="true">✉️</span> <a href="mailto:cirbd.org@gmail.com" class="hover:text-indigo-700 hover:underline">cirbd.org@gmail.com</a></p>
-          <p class="flex items-center gap-3"> <span class="text-indigo-600" aria-hidden="true">🕒</span> Mon - Fri: 9:00 AM - 5:00 PM</p>
+        <div class="flex items-center gap-3 mb-2">
+          <span class="h-1 w-10 bg-brand-500 rounded"></span>
+          <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">Get In Touch</span>
+        </div>
+        <h2 class="font-serif text-3xl font-bold text-navy-900">We'd love to hear from you</h2>
+        <div class="space-y-3 text-slate-600 pt-2">
+          <p class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-brand-500 w-4" aria-hidden="true"></i> House: 56, Road: 502, Sector: 17, Jolshiri Abashon, Purbachal, Bangladesh</p>
+          <p class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-500 w-4" aria-hidden="true"></i> <a href="tel:+8801710715032" class="hover:text-brand-700 hover:underline">+880 1710715032</a>, <a href="tel:+8801790008064" class="hover:text-brand-700 hover:underline">+880 01790008064</a></p>
+          <p class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-500 w-4" aria-hidden="true"></i> <a href="mailto:cirbd.org@gmail.com" class="hover:text-brand-700 hover:underline">cirbd.org@gmail.com</a></p>
+          <p class="flex items-center gap-3"><i class="fa-solid fa-clock text-brand-500 w-4" aria-hidden="true"></i> Mon - Fri: 9:00 AM - 5:00 PM</p>
         </div>
       </div>
-
-      <!-- Contact CTA -->
-      <div class="bg-white p-8 rounded-3xl shadow-sm border border-indigo-100">
-        <h3 class="text-xl font-bold text-indigo-900 mb-4">Have a message?</h3>
-        <p class="mb-6 text-slate-600">We'd love to hear from you. Send us an email and our team will get back to you shortly.</p>
+      <div class="bg-navy-900 text-white p-8 rounded-xl shadow-soft">
+        <h3 class="font-serif text-xl font-bold mb-4">Have a message?</h3>
+        <p class="mb-6 text-navy-100">Send us an email and our team will get back to you shortly.</p>
         <a href="mailto:cirbd.org@gmail.com"
-          class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-200">
-          Email Us
+          class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3 rounded-md transition shadow-lg">
+          Email Us <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
         </a>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-white py-12">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-6">
-
-        <!-- Logo / Brand -->
-        <a href="./index.html" class="flex items-center gap-3">
-          <img src="./img/logo.png" alt="CIR logo" class="h-8 w-auto object-contain" />
-          <span class="font-semibold text-white text-sm">Centre for Innovation and Research</span>
-        </a>
-
-        <!-- Navigation Links -->
-        <nav aria-label="Footer navigation" class="flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-400">
-          <a href="./index.html" class="hover:text-white transition">Home</a>
-          <a href="./index.html#whatwedo" class="hover:text-white transition">About Us</a>
-          <a href="./index.html#news-media" class="hover:text-white transition">News & Events</a>
-          <a href="./gallery.html" class="hover:text-white transition">Gallery</a>
-          <a href="./index.html#contact" class="hover:text-white transition">Contact</a>
-        </nav>
-
-        <!-- Copyright -->
-        <p class="text-sm text-slate-500 text-center md:text-right">© 2025 Centre for Innovation & Research. All rights reserved.</p>
-
+  <footer class="bg-navy-950 text-navy-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="./img/logo.png" alt="CIR logo" class="h-11 w-11 object-contain" />
+          <div class="leading-tight">
+            <div class="font-serif font-bold text-white">CIR</div>
+            <div class="text-[10px] text-navy-300 uppercase tracking-wider">Innovation &amp; Research</div>
+          </div>
+        </div>
+        <p class="text-sm text-navy-300 leading-relaxed">A hub for innovation, research, and development committed to inclusive policymaking and sustainable growth in Bangladesh.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="./index.html" class="hover:text-brand-300 transition">Home</a></li>
+          <li><a href="./index.html#whatwedo" class="hover:text-brand-300 transition">About Us</a></li>
+          <li><a href="./our_team.html" class="hover:text-brand-300 transition">Our Team</a></li>
+          <li><a href="./index.html#news-media" class="hover:text-brand-300 transition">News &amp; Events</a></li>
+          <li><a href="./index.html#contact" class="hover:text-brand-300 transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Publications</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="./book.html" class="hover:text-brand-300 transition">Book</a></li>
+          <li><a href="./journal.html" class="hover:text-brand-300 transition">Journal</a></li>
+          <li><a href="./columns.html" class="hover:text-brand-300 transition">Columns</a></li>
+          <li><a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="hover:text-brand-300 transition">CIR Journal &#8599;</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-brand-400 mt-0.5" aria-hidden="true"></i> House: 56, Road: 502, Sector: 17, Jolshiri Abashon, Purbachal, Bangladesh</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-phone text-brand-400 mt-0.5" aria-hidden="true"></i> <a href="tel:+8801710715032" class="hover:text-brand-300 transition">+880 1710715032</a></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-envelope text-brand-400 mt-0.5" aria-hidden="true"></i> <a href="mailto:cirbd.org@gmail.com" class="hover:text-brand-300 transition">cirbd.org@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-navy-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-navy-300">
+        <span>&copy; 2025 Centre for Innovation &amp; Research. All rights reserved.</span>
+        <span class="italic">"Wisdom for the Service of Humanity through Creativity"</span>
       </div>
     </div>
   </footer>
