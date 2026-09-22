@@ -41,7 +41,7 @@
     .prose-cir ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
     .prose-cir ul li { margin-bottom: .35rem; }
 
-    #mdmessage, #whatwedo, #news-media, #contact {
+    #whatwedo, #news-media, #contact {
       scroll-margin-top: 96px;
     }
   </style>
@@ -93,7 +93,7 @@
             </button>
             <div class="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block">
               <div class="w-56 bg-white text-slate-700 rounded-lg shadow-soft border border-slate-100 py-2">
-                <a href="#mdmessage" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">MD Message</a>
+                <a href="./md_message.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">MD Message</a>
                 <a href="#whatwedo" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">What We Do</a>
                 <a href="./our_team.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">Our Team</a>
               </div>
@@ -140,7 +140,7 @@
             About Us <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i>
           </button>
           <div id="about-submenu" class="hidden pl-6 space-y-1 text-navy-200">
-            <a href="#mdmessage" class="block px-3 py-2">MD Message</a>
+            <a href="./md_message.html" class="block px-3 py-2">MD Message</a>
             <a href="#whatwedo" class="block px-3 py-2">What We Do</a>
             <a href="./our_team.html" class="block px-3 py-2">Our Team</a>
           </div>
@@ -319,29 +319,18 @@
         </div>
       </div>
 
-      <div id="mdmessage" class="bg-navy-900 text-white rounded-[3rem] p-8 md:p-16 mb-20 overflow-hidden relative">
-        <div class="max-w-4xl mx-auto text-center mb-8">
-          <h1 class="font-serif text-3xl md:text-4xl font-bold mb-2">MANAGING DIRECTOR & LEAD CONSULTANT MESSAGE</h1>
-          <h4 class="text-brand-400 font-medium">Welcome Message from Managing Director & Lead Consultant</h4>
+      <div class="bg-navy-900 text-white rounded-3xl p-8 md:p-12 mb-20 flex flex-col md:flex-row items-center gap-8">
+        <img src="./img/brig gen md anwar shafique.jpg" alt="Brigadier General MD. Anwar Shafique"
+          class="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover shadow-lg flex-shrink-0">
+        <div class="text-center md:text-left flex-1">
+          <span class="text-brand-400 text-sm font-semibold uppercase tracking-wider">A Message From Our Leadership</span>
+          <h2 class="font-serif text-2xl md:text-3xl font-bold mt-1 mb-2">Managing Director &amp; Lead Consultant Message</h2>
+          <p class="text-slate-300 leading-relaxed">Read a welcome message from Brigadier General Md. Anwar Shafique on CIR's mission, ambitions, and vision for the future.</p>
         </div>
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-          <img src="./img/brig gen md anwar shafique.jpg" alt="Brigadier General MD. Anwar Shafique"
-            class="rounded-2xl shadow-2xl object-cover w-full h-auto">
-          <div class="text-justify text-slate-300 leading-relaxed space-y-3 text-sm md:text-base">
-            <p>Welcome to the <b class="text-white">Center for Innovation and Research (CIR)!</b> It is with great enthusiasm that I embrace you at the <b class="text-white">CIR</b>—a hub where creativity meets cutting-edge technology, and ideas transform into impactful solutions.</p>
-            <p>The ambition of the center is to create knowledge through academic and applied research and disseminate acquired knowledge through training and publication. CIR, an emerging research organization, is a research, training and human development center which works for the greater well-being of society for achieving sustainable development goals and more.</p>
-            <p>We believe in the power of collaboration, bringing together bright minds from diverse disciplines to spark creativity and foster impactful research. This center is more than just a space; it's a vibrant ecosystem where curiosity is nurtured, experimentation is encouraged, and innovation thrives.</p>
-            <p>I am confident that together, we will achieve remarkable things. I look forward to witnessing the groundbreaking discoveries and transformative innovations that will emerge from the Center for Innovation and Research.</p>
-            <p>Welcome on the knowledge ship! Let's shape the future together.</p>
-          </div>
-        </div>
-        <div class="mt-8 text-center md:text-left border-t border-slate-800 pt-6">
-          <h4 class="text-brand-400 font-medium">Warm Regards,</h4>
-          <h1 class="text-2xl font-bold text-white"><b class="text-white">BRIGADIER GENERAL MD. ANWAR SHAFIQUE</b></h1>
-          <h5 class="text-slate-400 text-xs font-bold">(retd), NDC, PSC, PGD (USA), MSS, MBA, MPHIL, PHD</h5>
-          <h3 class="text-lg text-slate-200">Managing Director & Lead Consultant</h3>
-          <h3 class="text-slate-300">Center for Innovation and Research</h3>
-        </div>
+        <a href="./md_message.html"
+          class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3 rounded-md transition shadow-lg whitespace-nowrap">
+          Read Message <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+        </a>
       </div>
 
       <div id="whatwedo" class="mb-20">
@@ -505,6 +494,16 @@
         </a>
       </div>
     </div>
+    <div class="max-w-6xl mx-auto px-4 mt-10">
+      <div class="rounded-xl overflow-hidden shadow-soft border border-slate-100 h-72 md:h-96">
+        <iframe
+          src="https://www.google.com/maps?q=House+56%2C+Road+502%2C+Sector+17%2C+Jolshiri+Abashon%2C+Purbachal%2C+Bangladesh&output=embed"
+          class="w-full h-full border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="CIR office location on Google Maps"></iframe>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -519,6 +518,12 @@
           </div>
         </div>
         <p class="text-sm text-navy-300 leading-relaxed">A hub for innovation, research, and development committed to inclusive policymaking and sustainable growth in Bangladesh.</p>
+        <div class="flex items-center gap-4 mt-5 text-lg">
+          <a href="#" class="text-navy-300 hover:text-brand-300 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="#" class="text-navy-300 hover:text-brand-300 transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" class="text-navy-300 hover:text-brand-300 transition" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="#" class="text-navy-300 hover:text-brand-300 transition inline-flex items-center justify-center w-5 h-5 rounded-[3px] border border-current text-[10px] font-bold leading-none" aria-label="ResearchGate">RG</a>
+        </div>
       </div>
       <div>
         <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
@@ -675,7 +680,7 @@
     // Site search
     const SEARCH_INDEX = [
       { title: "Home", href: "./index.html" },
-      { title: "MD Message", href: "./index.html#mdmessage" },
+      { title: "MD Message", href: "./md_message.html" },
       { title: "What We Do", href: "./index.html#whatwedo" },
       { title: "Our Vision & Mission", href: "./index.html#whatwedo" },
       { title: "Our Team", href: "./our_team.html" },
