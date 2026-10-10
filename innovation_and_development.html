@@ -1,195 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0A2540">
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="./img/android-chrome-192x192.png">
-    <title>Innovation & Development | CIR</title>
-    <link href="./output.css" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Innovation & Development | CIR</title>
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-    }
 
-    .nav-link {
-      position: relative;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      height: 2px;
-      width: 0;
-      background: #33bdba;
-      transition: width .25s ease;
-    }
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      width: 100%;
-    }
+  <!-- Shared layout components: render <site-header>, <site-contact> and <site-footer> -->
+  <script src="./js/site-config.js"></script>
+  <script src="./js/components/site-header.js"></script>
+  <script src="./js/components/site-contact.js"></script>
+  <script src="./js/components/site-footer.js"></script>
 
-    .prose-cir p { margin-bottom: 1rem; }
-    .prose-cir ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
-    .prose-cir ul li { margin-bottom: .35rem; }
-
-    [data-reveal] {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-    [data-reveal].is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
-      html { scroll-behavior: auto !important; }
-    }
-
-    #whatwedo, #news-media, #contact {
-      scroll-margin-top: 96px;
-    }
-  </style>
+  <!-- Behaviour -->
+  <script src="./js/features/mobile-menu.js" defer></script>
+  <script src="./js/features/search.js" defer></script>
+  <script src="./js/features/back-to-top.js" defer></script>
+  <script src="./js/features/scroll-reveal.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-700">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-brand-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+  <site-header></site-header>
 
-  <!-- Top utility bar -->
-  <div class="bg-navy-950 text-navy-100 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-brand-400"></span> Research &amp; Innovation</span>
-        <span class="hidden sm:inline">Dhaka, Bangladesh</span>
-        <span class="hidden md:flex items-center gap-3 pl-3 ml-1 border-l border-navy-800">
-          <a href="#" class="hover:text-brand-300 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-          <a href="#" class="hover:text-brand-300 transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="#" class="hover:text-brand-300 transition" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-          <a href="#" class="hover:text-brand-300 transition inline-flex items-center justify-center w-3.5 h-3.5 rounded-[3px] border border-current text-[9px] font-bold leading-none" aria-label="ResearchGate">RG</a>
-        </span>
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="mailto:editor@cirbd.org" class="hidden sm:inline hover:text-brand-300 transition">editor@cirbd.org</a>
-        <span>+880 1710715032</span>
-      </div>
-    </div>
-  </div>
-
-  <header class="bg-navy-900 text-white sticky top-0 z-50 shadow-lg shadow-navy-950/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <!-- Brand -->
-        <a href="./index.html" class="flex items-center gap-3 group">
-          <img src="./img/logo.png" class="h-16 w-16 object-contain drop-shadow" alt="CIR logo">
-          <div class="leading-tight">
-            <div class="font-serif font-bold text-lg sm:text-xl tracking-wide group-hover:text-brand-300 transition">CIR</div>
-            <div class="text-xs sm:text-sm text-navy-200 uppercase tracking-wider">Centre for Innovation &amp; Research</div>
-            <div class="hidden md:block text-[11px] text-brand-300 italic mt-0.5">"Wisdom for the Service of Humanity through Creativity"</div>
-          </div>
-        </a>
-
-        <!-- Desktop Nav -->
-        <nav class="hidden xl:flex items-center gap-6 text-sm font-medium whitespace-nowrap">
-          <a href="./index.html" class="nav-link text-white">Home</a>
-
-          <div class="relative group">
-            <button class="nav-link text-navy-100 hover:text-white inline-flex items-center gap-1" aria-haspopup="true">
-              About Us <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
-            </button>
-            <div class="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-200 ease-out">
-              <div class="w-56 bg-white text-slate-700 rounded-lg shadow-soft border border-slate-100 py-2">
-                <a href="./md_message.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">MD Message</a>
-                <a href="./index.html#whatwedo" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">What We Do</a>
-                <a href="./our_team.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">Our Team</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="nav-link text-navy-100 hover:text-white inline-flex items-center gap-1">CIR Journal <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i></a>
-
-          <div class="relative group">
-            <button class="nav-link text-navy-100 hover:text-white inline-flex items-center gap-1" aria-haspopup="true">
-              Publications <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
-            </button>
-            <div class="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-200 ease-out">
-              <div class="w-48 bg-white text-slate-700 rounded-lg shadow-soft border border-slate-100 py-2">
-                <a href="./book.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">Book</a>
-                <a href="./journal.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">Journal</a>
-                <a href="./columns.html" class="block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-700">Columns</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="./index.html#news-media" class="nav-link text-navy-100 hover:text-white">News &amp; Events</a>
-          <a href="./index.html#contact" class="ml-2 inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-4 py-2 rounded-md transition shadow">Contact</a>
-        </nav>
-
-        <div class="flex items-center gap-1">
-          <button id="search-toggle" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-navy-100 hover:text-white hover:bg-navy-800 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400" aria-label="Search the site">
-            <i class="fa-solid fa-magnifying-glass text-lg" aria-hidden="true"></i>
-          </button>
-          <!-- Mobile Hamburger -->
-          <button id="menu-toggle" type="button" class="xl:hidden inline-flex items-center justify-center p-2 rounded-md text-navy-100 hover:text-white hover:bg-navy-800 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
-            <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="xl:hidden max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out border-t border-navy-800 bg-navy-900">
-      <div class="px-4 py-3 space-y-1 text-sm">
-        <a href="./index.html" class="block px-3 py-2 rounded-md text-white hover:bg-navy-800">Home</a>
-        <div>
-          <button type="button" class="w-full text-left px-3 py-2 rounded-md text-navy-100 hover:bg-navy-800 toggle-submenu flex justify-between items-center" data-target="about-submenu" aria-expanded="false">
-            About Us <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i>
-          </button>
-          <div id="about-submenu" class="max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out pl-6 space-y-1 text-navy-200">
-            <a href="./md_message.html" class="block px-3 py-2">MD Message</a>
-            <a href="./index.html#whatwedo" class="block px-3 py-2">What We Do</a>
-            <a href="./our_team.html" class="block px-3 py-2">Our Team</a>
-          </div>
-        </div>
-                <a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="block px-3 py-2 rounded-md text-navy-100 hover:bg-navy-800">CIR Journal</a>
-        <div>
-          <button type="button" class="w-full text-left px-3 py-2 rounded-md text-navy-100 hover:bg-navy-800 toggle-submenu flex justify-between items-center" data-target="publications-submenu" aria-expanded="false">
-            Publications <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i>
-          </button>
-          <div id="publications-submenu" class="max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out pl-6 space-y-1 text-navy-200">
-            <a href="./book.html" class="block px-3 py-2">Book</a>
-            <a href="./journal.html" class="block px-3 py-2">Journal</a>
-            <a href="./columns.html" class="block px-3 py-2">Columns</a>
-          </div>
-        </div>
-        <a href="./index.html#news-media" class="block px-3 py-2 rounded-md text-navy-100 hover:bg-navy-800">News &amp; Events</a>
-        <a href="./index.html#contact" class="block px-3 py-2 rounded-md text-brand-300 font-semibold hover:bg-navy-800">Contact Us</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Search Overlay -->
-  <div id="search-overlay" class="hidden fixed inset-0 z-[70] bg-navy-950/70 backdrop-blur-sm flex items-start justify-center pt-24 px-4">
-    <div class="bg-white rounded-xl shadow-soft w-full max-w-lg overflow-hidden">
-      <div class="flex items-center gap-3 border-b border-slate-100 px-4 py-3">
-        <i class="fa-solid fa-magnifying-glass text-slate-400" aria-hidden="true"></i>
-        <input id="search-input" type="text" placeholder="Search pages, team, publications..." class="flex-1 outline-none text-slate-800 placeholder:text-slate-400" autocomplete="off">
-        <button id="search-close" type="button" class="text-slate-400 hover:text-slate-600" aria-label="Close search"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-      </div>
-      <div id="search-results" class="max-h-80 overflow-y-auto py-2"></div>
-    </div>
-  </div>
-
-    <main id="main-content" class="flex flex-col items-center min-h-screen px-4 pt-10 md:pt-12 pb-16">
+  <main id="main-content" class="flex flex-col items-center min-h-screen px-4 pt-10 md:pt-12 pb-16">
       <div class="max-w-2xl w-full text-center py-16" data-reveal>
         <span class="inline-block bg-brand-100 text-brand-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">Coming Soon</span>
         <h1 class="font-serif text-3xl md:text-4xl font-extrabold text-navy-900 mb-4">Innovation & Development</h1>
@@ -201,228 +43,9 @@
           <a href="./index.html#contact" class="bg-white text-brand-700 px-6 py-3 rounded-xl border border-brand-200 hover:bg-brand-50 transition">Contact Us</a>
         </div>
       </div>
-    </main>
-<!-- Contact -->
-  <div id="contact" class="bg-white py-16 md:py-20 border-t border-slate-100">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-      <div class="space-y-4">
-        <div class="flex items-center gap-3 mb-2">
-          <span class="h-1 w-10 bg-brand-500 rounded"></span>
-          <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">Get In Touch</span>
-        </div>
-        <h2 class="font-serif text-3xl font-bold text-navy-900">We'd love to hear from you</h2>
-        <div class="space-y-3 text-slate-600 pt-2">
-          <p class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-brand-500 w-4" aria-hidden="true"></i> House: 56, Road: 502, Sector: 17, Jolshiri Abashon, Purbachal, Bangladesh</p>
-          <p class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-500 w-4" aria-hidden="true"></i> <a href="tel:+8801710715032" class="hover:text-brand-700 hover:underline">+880 1710715032</a>, <a href="tel:+8801790008064" class="hover:text-brand-700 hover:underline">+880 01790008064</a></p>
-          <p class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-500 w-4" aria-hidden="true"></i> <a href="mailto:editor@cirbd.org" class="hover:text-brand-700 hover:underline">editor@cirbd.org</a></p>
-          <p class="flex items-center gap-3"><i class="fa-solid fa-clock text-brand-500 w-4" aria-hidden="true"></i> Mon - Fri: 9:00 AM - 5:00 PM</p>
-        </div>
-      </div>
-      <div class="bg-navy-900 text-white p-8 rounded-xl shadow-soft">
-        <h3 class="font-serif text-xl font-bold mb-4">Have a message?</h3>
-        <p class="mb-6 text-navy-100">Send us an email and our team will get back to you shortly.</p>
-        <a href="mailto:editor@cirbd.org"
-          class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3 rounded-md transition shadow-lg">
-          Email Us <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-    <div class="max-w-6xl mx-auto px-4 mt-10">
-      <div class="rounded-xl overflow-hidden shadow-soft border border-slate-100 h-72 md:h-96">
-        <iframe
-          src="https://www.google.com/maps?q=House+56%2C+Road+502%2C+Sector+17%2C+Jolshiri+Abashon%2C+Purbachal%2C+Bangladesh&output=embed"
-          class="w-full h-full border-0"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="CIR office location on Google Maps"></iframe>
-      </div>
-    </div>
-  </div>
+  </main>
 
-  <!-- Footer -->
-  <footer class="bg-navy-950 text-navy-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <img src="./img/logo.png" alt="CIR logo" class="h-11 w-11 object-contain" />
-          <div class="leading-tight">
-            <div class="font-serif font-bold text-white">CIR</div>
-            <div class="text-[10px] text-navy-300 uppercase tracking-wider">Innovation &amp; Research</div>
-          </div>
-        </div>
-        <p class="text-sm text-navy-300 leading-relaxed">A hub for innovation, research, and development committed to inclusive policymaking and sustainable growth in Bangladesh.</p>
-        <div class="flex items-center gap-4 mt-5 text-lg">
-          <a href="#" class="text-navy-300 hover:text-brand-300 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-          <a href="#" class="text-navy-300 hover:text-brand-300 transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="#" class="text-navy-300 hover:text-brand-300 transition" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-          <a href="#" class="text-navy-300 hover:text-brand-300 transition inline-flex items-center justify-center w-5 h-5 rounded-[3px] border border-current text-[10px] font-bold leading-none" aria-label="ResearchGate">RG</a>
-        </div>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="./index.html" class="hover:text-brand-300 transition">Home</a></li>
-          <li><a href="./index.html#whatwedo" class="hover:text-brand-300 transition">About Us</a></li>
-          <li><a href="./our_team.html" class="hover:text-brand-300 transition">Our Team</a></li>
-          <li><a href="./index.html#news-media" class="hover:text-brand-300 transition">News &amp; Events</a></li>
-          <li><a href="./index.html#contact" class="hover:text-brand-300 transition">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Publications</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="./book.html" class="hover:text-brand-300 transition">Book</a></li>
-          <li><a href="./journal.html" class="hover:text-brand-300 transition">Journal</a></li>
-          <li><a href="./columns.html" class="hover:text-brand-300 transition">Columns</a></li>
-          <li><a href="https://cirjournal.cirbd.org" target="_blank" rel="noopener" class="hover:text-brand-300 transition">CIR Journal &#8599;</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-brand-400 mt-0.5" aria-hidden="true"></i> House: 56, Road: 502, Sector: 17, Jolshiri Abashon, Purbachal, Bangladesh</li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-phone text-brand-400 mt-0.5" aria-hidden="true"></i> <a href="tel:+8801710715032" class="hover:text-brand-300 transition">+880 1710715032</a></li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-envelope text-brand-400 mt-0.5" aria-hidden="true"></i> <a href="mailto:editor@cirbd.org" class="hover:text-brand-300 transition">editor@cirbd.org</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="border-t border-navy-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-navy-300">
-        <span>&copy; 2025 Centre for Innovation &amp; Research. All rights reserved.</span>
-        <span class="italic">"Wisdom for the Service of Humanity through Creativity"</span>
-      </div>
-    </div>
-  </footer>
-
-
-  <!-- Back to top -->
-  <button id="back-to-top" type="button" aria-label="Back to top"
-    class="fixed bottom-6 right-6 z-40 h-11 w-11 rounded-full bg-navy-900 text-white shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-2 transition-all duration-300 hover:bg-brand-500">
-    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-  </button>
-  <script>
-    // Toggle mobile menu (smooth collapse)
-    function toggleCollapsible(el, openMaxHeightClass) {
-      const opening = el.classList.contains('max-h-0');
-      el.classList.toggle('max-h-0', !opening);
-      el.classList.toggle(openMaxHeightClass, opening);
-      return opening;
-    }
-
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (menuToggle && mobileMenu) {
-      const menuIcon = menuToggle.querySelector('i');
-      menuToggle.addEventListener('click', () => {
-        const opening = toggleCollapsible(mobileMenu, 'max-h-[1200px]');
-        menuToggle.setAttribute('aria-expanded', String(opening));
-        if (menuIcon) {
-          menuIcon.classList.toggle('fa-bars', !opening);
-          menuIcon.classList.toggle('fa-xmark', opening);
-        }
-      });
-    }
-
-    // Toggle submenus (smooth collapse)
-    document.querySelectorAll('.toggle-submenu').forEach(button => {
-      button.addEventListener('click', () => {
-        const targetId = button.getAttribute('data-target');
-        const submenu = document.getElementById(targetId);
-        const opening = toggleCollapsible(submenu, 'max-h-[500px]');
-        button.setAttribute('aria-expanded', String(opening));
-      });
-    });
-
-    // Back to top button
-    const backToTop = document.getElementById('back-to-top');
-    if (backToTop) {
-      const updateBackToTop = () => {
-        const show = window.scrollY > 400;
-        backToTop.classList.toggle('opacity-0', !show);
-        backToTop.classList.toggle('pointer-events-none', !show);
-        backToTop.classList.toggle('translate-y-2', !show);
-      };
-      window.addEventListener('scroll', updateBackToTop, { passive: true });
-      updateBackToTop();
-      backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    // Scroll-reveal animation
-    (function () {
-      const revealEls = document.querySelectorAll('[data-reveal]');
-      if (!revealEls.length) return;
-      if (!('IntersectionObserver' in window)) {
-        revealEls.forEach(el => el.classList.add('is-visible'));
-        return;
-      }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      revealEls.forEach(el => io.observe(el));
-    })();
-
-
-    // Site search
-    const SEARCH_INDEX = [
-      { title: "Home", href: "./index.html" },
-      { title: "MD Message", href: "./md_message.html" },
-      { title: "What We Do", href: "./index.html#whatwedo" },
-      { title: "Our Vision & Mission", href: "./index.html#whatwedo" },
-      { title: "Our Team", href: "./our_team.html" },
-      { title: "Book: Bangladesh-India Cross-Border Trade", href: "./book.html" },
-      { title: "Journal Publications", href: "./journal.html" },
-      { title: "Columns & Articles", href: "./columns.html" },
-      { title: "News & Events", href: "./index.html#news-media" },
-      { title: "CIR Journal (CJIAR)", href: "https://cirjournal.cirbd.org" },
-      { title: "Contact Us", href: "./index.html#contact" },
-      { title: "Gallery", href: "./gallery.html" },
-      { title: "Posters", href: "./poster.html" },
-      { title: "Training", href: "./training.html" },
-      { title: "Technical Assistance", href: "./technical_assistance.html" },
-      { title: "Market Analysis", href: "./market_analysis.html" },
-      { title: "Surveys", href: "./surveys.html" },
-      { title: "Research Evaluation", href: "./research_evaluation.html" },
-      { title: "Innovation & Research Domain", href: "./innovation_and_research_domain.html" },
-      { title: "Innovation & Development", href: "./innovation_and_development.html" },
-    ];
-
-    const searchToggle = document.getElementById('search-toggle');
-    const searchOverlay = document.getElementById('search-overlay');
-    const searchInput = document.getElementById('search-input');
-    const searchClose = document.getElementById('search-close');
-    const searchResults = document.getElementById('search-results');
-
-    function renderSearchResults(query) {
-      const q = query.trim().toLowerCase();
-      const matches = q ? SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(q)) : SEARCH_INDEX;
-      searchResults.innerHTML = matches.length
-        ? matches.map(item => `<a href="${item.href}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">${item.title}</a>`).join('')
-        : '<p class="px-4 py-3 text-sm text-slate-400">No matches found.</p>';
-    }
-
-    if (searchToggle && searchOverlay) {
-      searchToggle.addEventListener('click', () => {
-        searchOverlay.classList.remove('hidden');
-        renderSearchResults('');
-        searchInput.value = '';
-        searchInput.focus();
-      });
-      searchClose.addEventListener('click', () => searchOverlay.classList.add('hidden'));
-      searchOverlay.addEventListener('click', (e) => {
-        if (e.target === searchOverlay) searchOverlay.classList.add('hidden');
-      });
-      searchInput.addEventListener('input', () => renderSearchResults(searchInput.value));
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') searchOverlay.classList.add('hidden');
-      });
-    }
-  </script>
+  <site-contact></site-contact>
+  <site-footer></site-footer>
 </body>
 </html>
