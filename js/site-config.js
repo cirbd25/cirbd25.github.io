@@ -9,15 +9,14 @@ window.CIR = window.CIR || {};
 
 CIR.config = {
   contact: {
-    email: 'editor@cirbd.org',
+    email: 'cir.journal16@gmail.com',
     // The first number is shown in the top bar and footer.
     phones: [
       { display: '+880 1710715032', tel: '+8801710715032' },
-      { display: '+880 01790008064', tel: '+8801790008064' },
     ],
-    address: 'House: 56, Road: 502, Sector: 17, Jolshiri Abashon, Purbachal, Bangladesh',
-    hours: 'Mon - Fri: 9:00 AM - 5:00 PM',
-    mapEmbedUrl: 'https://www.google.com/maps?q=House+56%2C+Road+502%2C+Sector+17%2C+Jolshiri+Abashon%2C+Purbachal%2C+Bangladesh&output=embed',
+    address: 'House-11, Road-11, Block-C, Pallabi, Mirpur-12, Mirpur, Dhaka, Bangladesh',
+    hours: 'Sunday - Thursday: 9:00 AM - 5:00 PM',
+    mapEmbedUrl: 'https://www.google.com/maps?q=House+11%2C+Road+11%2C+Block+C%2C+Pallabi%2C+Mirpur-12%2C+Dhaka%2C+Bangladesh&output=embed',
   },
 
   // Shown in the top utility bar and the footer. Use `icon` (Font Awesome
