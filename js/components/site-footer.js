@@ -42,7 +42,7 @@
           <ul class="space-y-3 text-sm">
             <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-brand-400 mt-0.5" aria-hidden="true"></i> ${contact.address}</li>
             <li class="flex items-start gap-2"><i class="fa-solid fa-phone text-brand-400 mt-0.5" aria-hidden="true"></i> <a href="tel:${contact.phones[0].tel}" class="hover:text-brand-300 transition">${contact.phones[0].display}</a></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope text-brand-400 mt-0.5" aria-hidden="true"></i> <a href="mailto:${contact.email}" class="hover:text-brand-300 transition">${contact.email}</a></li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-envelope text-brand-400 mt-0.5" aria-hidden="true"></i> <span class="flex flex-col gap-1">${contact.emails.map(e => `<a href="mailto:${e}" class="hover:text-brand-300 transition">${e}</a>`).join('\n')}</span></li>
           </ul>
         </div>
       </div>

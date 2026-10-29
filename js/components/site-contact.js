@@ -9,6 +9,10 @@
     .map(p => `<a href="tel:${p.tel}" class="hover:text-brand-700 hover:underline">${p.display}</a>`)
     .join(', ');
 
+  const emailLinks = contact.emails
+    .map(e => `<a href="mailto:${e}" class="hover:text-brand-700 hover:underline">${e}</a>`)
+    .join('\n');
+
   const template = `
     <div id="contact" class="bg-white py-16 md:py-20 border-t border-slate-100">
       <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -21,14 +25,14 @@
           <div class="space-y-3 text-slate-600 pt-2">
             <p class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-brand-500 w-4" aria-hidden="true"></i> ${contact.address}</p>
             <p class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-500 w-4" aria-hidden="true"></i> ${phoneLinks}</p>
-            <p class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-500 w-4" aria-hidden="true"></i> <a href="mailto:${contact.email}" class="hover:text-brand-700 hover:underline">${contact.email}</a></p>
+            <div class="flex items-start gap-3"><i class="fa-solid fa-envelope text-brand-500 w-4 mt-1" aria-hidden="true"></i> <div class="flex flex-col">${emailLinks}</div></div>
             <p class="flex items-center gap-3"><i class="fa-solid fa-clock text-brand-500 w-4" aria-hidden="true"></i> ${contact.hours}</p>
           </div>
         </div>
         <div class="bg-navy-900 text-white p-8 rounded-xl shadow-soft">
           <h3 class="font-serif text-xl font-bold mb-4">Have a message?</h3>
           <p class="mb-6 text-navy-100">Send us an email and our team will get back to you shortly.</p>
-          <a href="mailto:${contact.email}"
+          <a href="mailto:${contact.emails[0]}"
             class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-6 py-3 rounded-md transition shadow-lg">
             Email Us <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
           </a>

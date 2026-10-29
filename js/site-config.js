@@ -9,7 +9,8 @@ window.CIR = window.CIR || {};
 
 CIR.config = {
   contact: {
-    email: 'cir.journal16@gmail.com',
+    // Each address is shown on its own line; the first is used by the "Email Us" button.
+    emails: ['contact@cirbd.org', 'cirb25@yahoo.com'],
     // The first number is shown in the top bar and footer.
     phones: [
       { display: '+880 1710715032', tel: '+8801710715032' },

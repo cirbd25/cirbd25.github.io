@@ -69,7 +69,9 @@
           </span>
         </div>
         <div class="flex items-center gap-4">
-          <a href="mailto:${contact.email}" class="hidden sm:inline hover:text-brand-300 transition">${contact.email}</a>
+          <span class="hidden sm:inline leading-tight">
+            ${contact.emails.map(e => `<a href="mailto:${e}" class="block hover:text-brand-300 transition">${e}</a>`).join('\n')}
+          </span>
           <span>${contact.phones[0].display}</span>
         </div>
       </div>
